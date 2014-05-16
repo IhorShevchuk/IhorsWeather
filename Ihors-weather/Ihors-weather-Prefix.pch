@@ -15,5 +15,7 @@
     #import <Foundation/Foundation.h>
 #endif
 
+#define APPID @"your app id"
 
 #import "IWLiberyOfFunctions.h"
+

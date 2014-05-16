@@ -45,7 +45,7 @@
 
 	// Uncomment the following line to display an Edit button in the navigation bar for this view controller.
 	// self.navigationItem.rightBarButtonItem = self.editButtonItem;
-	IWYahooWeatherAdapter *iwYahooWeatherAdapter = [[IWYahooWeatherAdapter alloc]initWithAppID:@"pI6c76jV34GJKzisWHae.pPJ.VYaS_MxgSBDD0Fykj1UPhZ1LlUhn9YRXrg30dg4oZqfRQ--" andDelegate:self];
+	IWYahooWeatherAdapter *iwYahooWeatherAdapter = [[IWYahooWeatherAdapter alloc]initWithAppID:APPID andDelegate:self];
 	filteredRegions = nil;
 	[iwYahooWeatherAdapter loadListOfRegionsForCountryCode:self.countryCode];
 }
