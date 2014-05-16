@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="xTo-Yb-7es">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Country Selecter View Controller - Please select your country-->
+        <scene sceneID="cx0-Sf-imY">
+            <objects>
+                <tableViewController storyboardIdentifier="countrySelector" id="giJ-81-Ldi" customClass="IWCountrySelecterViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="7IX-Ek-9gD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="uK0-Z9-5Gf">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="giJ-81-Ldi" id="0BL-cm-wei"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="countryNameCell" id="kxp-8D-T4a">
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kxp-8D-T4a" id="kig-Gh-ke7">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ujv-Hb-yFN" kind="push" id="du3-CZ-xrI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="giJ-81-Ldi" id="NRz-Ku-U8x"/>
+                            <outlet property="delegate" destination="giJ-81-Ldi" id="JIg-Qv-6aa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Please select your country" id="wi0-e6-Pi0"/>
+                    <connections>
+                        <outlet property="countrySearchBar" destination="uK0-Z9-5Gf" id="4pi-Kf-9Tf"/>
+                        <outlet property="countryTableView" destination="7IX-Ek-9gD" id="v1B-tV-MIW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1S-W8-QSm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="71"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4LD-V8-IRN">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="xTo-Yb-7es" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="23k-BA-pMV">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="giJ-81-Ldi" kind="relationship" relationship="rootViewController" id="HBt-Mv-3zp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHS-gW-yyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-62" y="71"/>
+        </scene>
+        <!--City Selector View Controller - Select your city-->
+        <scene sceneID="kCr-f8-oda">
+            <objects>
+                <tableViewController storyboardIdentifier="citySelector" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jO9-Md-3tG" customClass="IWCitySelectorViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3gT-3a-lC8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="vmN-i7-bBF">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="jO9-Md-3tG" id="yho-LN-bgD"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityNameCell" id="y4H-cp-xRY">
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="y4H-cp-xRY" id="mwG-8K-V62">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="bRc-54-L5V" kind="push" id="tJr-a2-zQX"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="jO9-Md-3tG" id="Ym3-0G-RlS"/>
+                            <outlet property="delegate" destination="jO9-Md-3tG" id="0Cr-Sv-hDE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select your city" id="Rih-fC-Va6"/>
+                    <connections>
+                        <outlet property="citySearchBar" destination="vmN-i7-bBF" id="J4l-ET-kHw"/>
+                        <outlet property="cityTableView" destination="3gT-3a-lC8" id="OXf-Ya-pRc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gcj-Td-b8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="71"/>
+        </scene>
+        <!--Weather View Controller - Weather-->
+        <scene sceneID="MHP-wc-3WJ">
+            <objects>
+                <viewController storyboardIdentifier="wheatherView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bRc-54-L5V" customClass="IWWeatherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WgN-mR-APD"/>
+                        <viewControllerLayoutGuide type="bottom" id="rMT-gZ-VED"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hm1-Sa-dZd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mediaPlaybackRequiresUserAction="NO" mediaPlaybackAllowsAirPlay="NO" keyboardDisplayRequiresUserAction="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V85-2Z-PpL">
+                                <rect key="frame" x="0.0" y="65" width="320" height="503"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bRc-54-L5V" id="53k-wT-Xgc"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weather" id="GjH-Lq-0Xk"/>
+                    <connections>
+                        <outlet property="weatherWebView" destination="V85-2Z-PpL" id="v8h-jQ-MLN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C6e-i9-WAD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2116" y="71"/>
+        </scene>
+        <!--Region Selector View Controller - Select your region-->
+        <scene sceneID="vcV-MI-S4D">
+            <objects>
+                <tableViewController storyboardIdentifier="regionSelector" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ujv-Hb-yFN" customClass="IWRegionSelectorViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="G2O-s6-oFx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="fTS-MX-jIm">
+                            <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="ujv-Hb-yFN" id="hJg-Ow-ll8"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="regionNameCell" id="11m-uK-7Nb">
+                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="11m-uK-7Nb" id="zaC-uh-FI0">
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="jO9-Md-3tG" kind="push" id="DTa-R7-K4c"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ujv-Hb-yFN" id="lxo-9A-u7a"/>
+                            <outlet property="delegate" destination="ujv-Hb-yFN" id="zAA-lN-vvW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Select your region" id="bNV-sd-RTp"/>
+                    <connections>
+                        <outlet property="regionsSearchBar" destination="fTS-MX-jIm" id="VKm-yz-LPS"/>
+                        <outlet property="regionsTableView" destination="G2O-s6-oFx" id="Ql1-Ma-e25"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OYv-2i-Vfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="71"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
